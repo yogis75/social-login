@@ -36,7 +36,7 @@ function testAPI() {
   console.log("Welcome!  Fetching your information.... ");
   FB.api("/me", function (response) {
     console.log("Successful login for: " + response.name);
-    buttonsWrapper.style.display = "none";
+    buttonsWrapper.innerHTML = "";
     userWrapper.style.display = "block";
     userInfo.innerHTML = `
     <p>Welcome ${response.name}!</p>
@@ -46,3 +46,10 @@ function testAPI() {
     `;
   });
 }
+
+// var fbLoginBtn = document.querySelector(".fb-login-button");
+
+// fbLoginBtn.addEventListener("click", function () {
+//   buttonsWrapper.style.display = "none";
+//   userWrapper.style.display = "block";
+// });
