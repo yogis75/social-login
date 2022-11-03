@@ -35,12 +35,9 @@ function testAPI() {
     console.log("Successful login for: " + response.name);
     document.querySelector(".user-info").innerHTML = `
     <p>Welcome ${response.name}!</p>
-    <button onclick="signOutFB()">Sign Out</button>
+    <button onclick="FB.logout(function () {
+        location.reload();
+      })">Sign Out</button>
     `;
   });
-}
-
-function signOutFB() {
-  FB.logout();
-  location.reload();
 }
