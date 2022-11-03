@@ -1,3 +1,7 @@
+var buttonsWrapper = document.querySelector(".buttons-wrapper");
+var userWrapper = document.querySelector(".user-wrapper");
+var userInfo = document.querySelector(".user-info");
+
 function statusChangeCallback(response) {
   if (response.status === "connected") {
     // Logged into your webpage and Facebook.
@@ -32,9 +36,9 @@ function testAPI() {
   console.log("Welcome!  Fetching your information.... ");
   FB.api("/me", function (response) {
     console.log("Successful login for: " + response.name);
-    document.querySelector(".buttons-wrapper").style.display = "none";
-    document.querySelector(".user-wrapper").style.display = "block";
-    document.querySelector(".user-info").innerHTML = `
+    buttonsWrapper.style.display = "none";
+    userWrapper.style.display = "block";
+    userInfo.innerHTML = `
     <p>Welcome ${response.name}!</p>
     <button onclick="FB.logout(function () {
         location.reload();
