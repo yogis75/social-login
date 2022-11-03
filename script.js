@@ -11,6 +11,7 @@ function handleCredentialResponse(response) {
   userInfo.innerHTML = userdata;
   userWrapper.style.display = "block";
   googleButton.style.display = "none";
+  document.querySelector(".buttons-wrapper").style.display = "none";
 }
 
 window.onload = function () {
