@@ -1,10 +1,8 @@
 function statusChangeCallback(response) {
-  // Called with the results from FB.getLoginStatus().
-  console.log("statusChangeCallback");
-  console.log(response); // The current login status of the person.
   if (response.status === "connected") {
     // Logged into your webpage and Facebook.
     testAPI();
+    document.querySelector(".buttons-wrapper").style.display = "none";
   }
 }
 
@@ -34,7 +32,13 @@ function testAPI() {
   console.log("Welcome!  Fetching your information.... ");
   FB.api("/me", function (response) {
     console.log("Successful login for: " + response.name);
-    document.getElementById("status").innerHTML =
-      "Thanks for logging in, " + response.name + "!";
+    document.querySelector(".user-info").innerHTML = `
+    <p>Welcome ${response.name}!</p>
+    <button onclick="signOutFB()">Sign Out</button>
+    `;
   });
+}
+
+function signOutFB() {
+  FB.signout();
 }
