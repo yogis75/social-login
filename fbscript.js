@@ -3,6 +3,7 @@ function statusChangeCallback(response) {
     // Logged into your webpage and Facebook.
     testAPI();
     document.querySelector(".buttons-wrapper").style.display = "none";
+    document.querySelector(".user-wrapper").style.display = "block";
   }
 }
 
