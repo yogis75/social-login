@@ -8,10 +8,16 @@
     <title>signinApp</title>
   </head>
   <body>
-    <div id="signin-button"></div>
+    <div class="buttons-wrapper">
+      <div id="signin-button"></div>
+      <button id="fb-login">F Login with FB</button>
+    </div>
+
     <div class="user-wrapper">
       <div class="user-info"></div>
     </div>
-    <script src="./script.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="./fbscript.js"></script>
+    <!-- <script src="./script.js"></script> -->
   </body>
 </html>

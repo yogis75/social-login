@@ -7,11 +7,18 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#signin-button {
-  height: 50px;
+.buttons-wrapper {
+  height: 250px;
   position: absolute;
   right: 10px;
   top: 10px;
+}
+
+#fb-login {
+  height: 32px;
+  width: 200px;
+  text-align: left;
+  margin-top: 10px;
 }
 
 .profile-img {
