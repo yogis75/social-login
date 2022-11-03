@@ -8,6 +8,14 @@
     <title>signinApp</title>
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0&appId=1322699568548542&autoLogAppEvents=1"
+      nonce="xIiByjy9"
+    ></script>
     <div class="buttons-wrapper">
       <div id="signin-button"></div>
       <!-- The JS SDK Login Button -->
@@ -18,7 +26,15 @@
         onlogin="checkLoginState();"
       >
       </fb:login-button>
-      <button id="fb-login">F Login with FB</button>
+      <div
+        class="fb-login-button"
+        data-width="200"
+        data-size="medium"
+        data-button-type="login_with"
+        data-layout="default"
+        data-auto-logout-link="false"
+        data-use-continue-as="true"
+      ></div>
     </div>
 
     <div class="user-wrapper">
@@ -28,7 +44,6 @@
 
     <script src="https://accounts.google.com/gsi/client" async defer></script>
 
-    <!-- <script src="./fbscript.js"></script> -->
     <!-- <script src="./script.js"></script> -->
 
     <script src="./fbscript.js"></script>
