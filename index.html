@@ -10,14 +10,35 @@
   <body>
     <div class="buttons-wrapper">
       <div id="signin-button"></div>
+      <!-- The JS SDK Login Button -->
+
+      <fb:login-button
+        id="fb-login"
+        scope="public_profile,email"
+        onlogin="checkLoginState();"
+      >
+      </fb:login-button>
       <button id="fb-login">F Login with FB</button>
     </div>
 
     <div class="user-wrapper">
       <div class="user-info"></div>
+      <div id="status"></div>
     </div>
+
     <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <script src="./fbscript.js"></script>
+
+    <!-- <script src="./fbscript.js"></script> -->
     <!-- <script src="./script.js"></script> -->
+
+    <script src="./fbscript.js"></script>
+
+    <!-- Load the JS SDK asynchronously -->
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js"
+    ></script>
   </body>
 </html>
