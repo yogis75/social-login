@@ -2,6 +2,7 @@ function statusChangeCallback(response) {
   if (response.status === "connected") {
     // Logged into your webpage and Facebook.
     testAPI();
+    location.reload();
   }
 }
 
