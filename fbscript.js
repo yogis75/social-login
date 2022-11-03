@@ -41,5 +41,6 @@ function testAPI() {
 }
 
 function signOutFB() {
-  FB.signout();
+  FB.logout();
+  location.reload();
 }
