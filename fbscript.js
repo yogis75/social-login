@@ -1,6 +1,4 @@
 function statusChangeCallback(response) {
-  document.querySelector(".buttons-wrapper").style.display = "none";
-  document.querySelector(".user-wrapper").style.display = "block";
   if (response.status === "connected") {
     // Logged into your webpage and Facebook.
     testAPI();
@@ -33,6 +31,8 @@ function testAPI() {
   console.log("Welcome!  Fetching your information.... ");
   FB.api("/me", function (response) {
     console.log("Successful login for: " + response.name);
+    document.querySelector(".buttons-wrapper").style.display = "none";
+    document.querySelector(".user-wrapper").style.display = "block";
     document.querySelector(".user-info").innerHTML = `
     <p>Welcome ${response.name}!</p>
     <button onclick="FB.logout(function () {
