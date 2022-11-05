@@ -14,45 +14,37 @@
       defer
       crossorigin="anonymous"
       src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0&appId=1322699568548542&autoLogAppEvents=1"
-      nonce="xIiByjy9"
+      nonce="c0IKl8Cr"
     ></script>
-    <div class="buttons-wrapper">
-      <div id="signin-button"></div>
-      <!-- The JS SDK Login Button -->
+    <!-- <div id="signin-button"></div> -->
+    <!-- The JS SDK Login Button -->
 
-      <!-- <fb:login-button
+    <!-- <fb:login-button
         id="fb-login"
         scope="public_profile,email"
         onlogin="checkLoginState();"
       >
       </fb:login-button> -->
-      <div
-        class="fb-login-button"
-        data-width="200"
-        data-size="medium"
-        data-button-type="login_with"
-        data-layout="default"
-        data-auto-logout-link="false"
-        data-use-continue-as="true"
-      ></div>
-    </div>
+    <div
+      class="fb-login-button"
+      data-width="200"
+      data-size="medium"
+      data-button-type="continue_with"
+      data-layout="default"
+      data-auto-logout-link="true"
+      data-use-continue-as="false"
+    ></div>
 
-    <div class="user-wrapper">
+    <div id="status"></div>
+
+    <!-- <div class="user-wrapper">
       <div class="user-info"></div>
-    </div>
+    </div> -->
 
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <!-- <script src="https://accounts.google.com/gsi/client" async defer></script> -->
 
-    <script src="./script.js"></script>
+    <!-- <script src="./script.js"></script> -->
 
     <script src="./fbscript.js"></script>
-
-    <!-- Load the JS SDK asynchronously -->
-    <script
-      async
-      defer
-      crossorigin="anonymous"
-      src="https://connect.facebook.net/en_US/sdk.js"
-    ></script>
   </body>
 </html>
